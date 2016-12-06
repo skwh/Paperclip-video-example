@@ -5,5 +5,12 @@
   <%= @entry.title %>
 </p>
 
+<p>Video:</p>
+<%= video_tag @entry.video, controls:"controls" %>
+
+<p>Thumbnail:</p>
+<%= image_tag @entry.video(:thumb) %>
+<br>
+
 <%= link_to 'Edit', edit_entry_path(@entry) %> |
 <%= link_to 'Back', entries_path %>
